@@ -1,0 +1,11 @@
+{
+  "name": "helijun",
+  "version": "1.0.0",
+  "description": "'我的个人站点'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "helijun",
+  "license": "ISC"
+}
