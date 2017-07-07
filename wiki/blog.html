@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta charset="UTF-8">
+	<title>LIUI文档</title>
+	<meta name="generator" content="MediaWiki 1.17.0">
+	<link rel="stylesheet" href="./static/style.css">
+</head>
+ <body>
+  
+    <div class="wrp_tab">
+		<div class="tab">        
+			<ul id="tab" class="tab_navs">            
+				<li class="tab_nav first " data-tab="dev">
+					<a href="./index.html" target="_self" class="jsUrlLink" data-url="index.html" data-param="tab=dev">LIUI文档</a>
+				</li>
+				<li class="tab_nav first selected" data-tab="dev">
+					<a href="./blog.html" target="_self" class="jsUrlLink" data-url="index2.html" data-param="tab=dev">博客</a>
+				</li>
+				<li class="tab_nav first" data-tab="dev">
+					<a href="https://helijun.github.io/pages/resume/2016_11_25.html" target="_self" class="jsUrlLink" data-url="index2.html" data-param="tab=dev">简历</a>
+				</li>
+			</ul>    
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="col_side">
+			<div class="menu_box_primary">
+				<dl id="resMenu" class="menu_primary">
+					<dt class="menu_title_primary closed"><i class="icon_menu_switch"></i><b>感悟</b></dt>
+					<dd class="menu_desc_primary" style="display:none;">    
+						<dl class="sub_menu_primary">
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/idea/二十一岁买了房，可我为什么不快乐？.html" target="iframe" class="menu_link_primary "><i>●</i>二十一岁买了房，可我为什么不快乐？</a>
+							</dt>
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/idea/愿无法充值的2016，你收获颇多.html" target="iframe" class="menu_link_primary "><i>●</i>愿无法充值的2016，你收获颇多</a>
+							</dt>
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/idea/前端项目从0到1的感悟.html" target="iframe" class="menu_link_primary "><i>●</i>前端项目从0到1的感悟</a>
+							</dt>
+						</dl>
+					</dd>
+
+					<dt class="menu_title_primary"><i class="icon_menu_switch"></i><b>2015-2016年</b></dt>
+					<dd class="menu_desc_primary" style="display:none;">    
+						<dl class="sub_menu_primary">
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/2015-2016/愿无法充值的2016，你收获颇多.html" target="iframe" class="menu_link_primary "><i>●</i>愿无法充值的2016，你收获颇多</a>
+							</dt>
+						</dl>
+					</dd>
+					<dt class="menu_title_primary closed"><i class="icon_menu_switch"></i><b>2017上半年</b></dt>
+					<dd class="menu_desc_primary">    
+						<dl class="sub_menu_primary">
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/2017/用docsify快速构建文档，并用GitHub Pages展示.html" target="iframe" class="menu_link_primary "><i>●</i>用docsify快速构建文档，并用GitHub Pages展示</a>
+							</dt>
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/2017/实现一个左滑删除功能.html" target="iframe" class="menu_link_primary "><i>●</i>实现一个左滑删除功能</a>
+							</dt>
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/2017/js实现复制功能.html" target="iframe" class="menu_link_primary "><i>●</i>js实现复制功能</a>
+							</dt>
+							<dt class="sub_menu_title_primary">
+								<a href="./page/blog/2017/js实现文字逐个出现动效.html" target="iframe" class="menu_link_primary "><i>●</i>js实现文字逐个出现动效</a>
+							</dt>
+						</dl>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="col_main">
+			<iframe class="res_iframe" id="iframe" name="iframe" src="./page/blog/idea/愿无法充值的2016，你收获颇多.html" onload="Javascript:SetCwinHeight()" border="0" frameborder="0" scrolling="yes" height="100%" width="100%">
+			</iframe>
+			<script type="text/javascript" src="./static/jquery-1.10.2.min.js"></script>
+			<script type="text/javascript">
+				function SetCwinHeight(){
+					var iframeid=document.getElementById("iframe"); //iframe id
+					if (document.getElementById){
+						if (iframeid && !window.opera){
+							if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight){
+								iframeid.height = iframeid.contentDocument.body.offsetHeight;
+							}else if(iframeid.Document && iframeid.Document.body.scrollHeight){
+								iframeid.height = iframeid.Document.body.scrollHeight;
+							}
+						}
+					}
+					window.scrollTo(0,0);
+				}
+				$(function(){
+					var flag = true;
+					$('.menu_title_primary').click(function(){
+						var hiddenElem = $(this).next('.menu_desc_primary');
+						$('.menu_desc_primary').hide();
+						$('.menu_title_primary').addClass('closed');
+						//如果显示就隐藏，如果隐藏就显示
+						
+						if(flag){
+							hiddenElem.show();
+							$(this).removeClass('closed');
+							flag = false;
+						}else{
+							flag = true;
+							hiddenElem.hide();
+							$(this).addClass('closed');
+						}
+						
+					})
+					
+					$('.menu_desc_primary a').click(function(){
+						$('.menu_desc_primary .selected').removeClass('selected');
+						$(this).addClass('selected');
+					})
+				})
+			</script>	
+		</div>
+	</div>
+
+	
+
+ </body>
+</html>

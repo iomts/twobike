@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>tips</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="../../../LIUI/css/li-1.2.0.css">
+<script src="../../../static/jquery-1.10.2.min.js"></script>
+<script src="../../../LIUI/js/li-1.2.0.js"></script>
+<style type="text/css">
+	body {
+		background-color: white;
+		padding: 1.0rem 2.8rem;
+		box-sizing: border-box;
+	}
+	.g-content {
+		margin-bottom: 2.8rem;
+	}
+	.g-title {
+		border-bottom: 1px solid #CCC;
+		padding-bottom: .2rem;
+	}
+	.li-module {
+		box-sizing: border-box;
+		padding-left: 2.2rem;
+	}
+	pre {
+		font-size: .696rem;
+	}
+	@media only screen and (min-width: 480px) {
+	  html {
+	    font-size: 18.6px !important; 
+	    } 
+	}
+</style>
+</head>
+<body>
+<section class="g-content">
+	<h2 class="g-title">字体大小</h2>
+	<div class="li-module">
+		<p>默认字体大小</p>
+		<h1>一级标题</h1>
+		<h2>二级标题</h2>
+		<h3>三级标题</h3>
+		<h4>四级标题</h4>
+		<h5>五级标题</h5>
+		<h6>六级标题</h6>
+	</div>
+	<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"g-title"</span>&gt;</span>字体大小<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-module"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>默认字体大小<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>一级标题<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>二级标题<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>三级标题<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>四级标题<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>五级标题<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>六级标题<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+</section>
+<section class="g-content">
+	<h2 class="g-title">字体颜色</h2>
+	<div class="li-module">
+		<p>主要内容色</p>
+		<p class="li-txt-default" style="background-color: black">主要内容反色</p>
+		<p class="li-txt-muted">辅助次要内容色</p>
+		<p class="li-txt-highlight">高亮，关键字，跟em相同</p>
+		<p class="li-txt-wraning">警示，会员红名，搜索热词 </p>
+		<p class="li-txt-info">链接颜色</p>
+		<p class="li-txt-success">成功文字</p>
+		<p class="li-txt-primary">primary 颜色</p>
+	</div>
+	<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-module"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>主要内容色<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-txt-white"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-color: black"</span>&gt;</span>主要内容反色<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-txt-muted"</span>&gt;</span>辅助次要内容色<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-txt-highlight"</span>&gt;</span>高亮<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-txt-wraning"</span>&gt;</span>警示，会员红名，搜索热词 <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-txt-info"</span>&gt;</span>链接颜色<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-txt-success"</span>&gt;</span>成功文字<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"li-txt-primary"</span>&gt;</span>primary 颜色<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+</section>
+<section class="g-content">
+	<h2 class="g-title">文本溢出</h2>
+	<div class="li-module">
+		<p class="li-txt-ellipsis">单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行</p>
+		<br>
+		<p class="li-txt-ellipsis li-lineclamp-2">保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行保留两行</p>
+
+		<br>
+		<p class="li-txt-ellipsis li-lineclamp-3">保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行保留3行</p>
+	</div>
+	<pre><code class="hljs cs">&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"li-module"</span>&gt;
+    &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"li-txt-ellipsis"</span>&gt;单行单行单行单行&lt;/p&gt;
+    &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"li-txt-ellipsis li-lineclamp-2"</span>&gt;保留两行保两行&lt;/p&gt;
+    &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"li-txt-ellipsis li-lineclamp-3"</span>&gt;保留<span class="hljs-number">3</span>行保留保留<span class="hljs-number">3</span>行保保留<span class="hljs-number">3</span>行&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+</section>
+
+<script type="text/javascript">
+	
+</script>
+<link rel="stylesheet" href="../../../static/monokai-sublime.css">
+<script src="../../../static/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
