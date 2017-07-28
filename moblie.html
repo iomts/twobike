@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no" >
+    <style type="text/css">
+        /** g区域 m模块 el元素*/
+        @import './static/component/li/li-1.2.0.css';
+        body,html {
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <article>
+        
+    </article>
+</body>
+
+<script id="MainTpl" type="text/x-template">
+<div class="wp">
+    <div class="wp-inner">
+        <div class="page">
+            <div class="li-row li-cell-xl li-align-center el-title">
+                <h1 class="li-col-100">达农保险</h1>
+            </div>
+            <div class="li-row li-cell-xl li-align-center el-slogan">
+                <p class="li-col-100">贴心专业 &nbsp;&nbsp;无忧保障</p>
+            </div>
+            <div class="li-row li-cell-xl li-align-center el-slogan">
+                <p class="li-col-100">农民身边的保险专家</p>
+            </div>
+            <div class="page1-footer li-row li-cell-xl li-align-center">
+                <div class="li-col-50">
+                    <img class="page1-img3" src="/static/img/dnb/dnbx_logo_1102.png">
+                </div>
+                <div class="li-col-50 li-row li-items-center el-dnb-img">
+                    <img class="page1-img2" src="/static/img/dnb/dnb_logo.png">达农帮
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <p class="" id="page2Txt">
+            深圳达农保险经纪有限公司成立于2016年5月，总部设立于深圳，立足打造农村互联网保险平台，首期注册资本5000万人民币，是诺普信农化股份有限公司控股的保险经纪服务商。达农保险将一直秉持“保险基于需求”的理念，以国家农业现代化的发展趋势为导向，积极发挥保险经纪金融工具的特有优势，以创新的模式，深入三农，为农业的现代化发展提供保障。展望未来，达农保险将以金融手段持续附着产业共同发展。
+            </p>
+            <div class="el-page2 li-none">
+                <h1 class="page2-title">公司介绍</h1>
+                <p class="fenge-solid"></p>
+                <p class="page2-txt" id="page2TxtShow"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+
+<script type="text/javascript">
+/*if(window.innerWidth <= 640) {
+	window.location.href = 'http://www.cnblogs.com/liliangel';//TODO 暂时跳转到博客
+}*/
+</script>
+<script src="./static/plugin/requirejs/require.min.js?v=20161017"></script>
+<script type="text/javascript">
+var script = document.createElement("script"),
+    head = document.head || document.getElementsByTagName('head')[0];
+
+script.type = "text/javascript";
+script.src = './config.js?ver=' + (new Date()).getTime();
+
+head.appendChild(script); 
+
+script.onload = script.onreadystatechange = function(){
+require(
+    [
+        'jquery',
+        'underscore',
+        'fullpage'
+    ], 
+    function($,_){
+
+        $('article').html(_.template(MainTpl.innerHTML)({}))
+
+       
+        $('.wp-inner')[0].fullpage({
+            drag: true
+        });
+
+        /*$('body').css({
+            'height': window.innerHeight
+        })*/
+		
+		/*$(window).resize(function() {
+			if(window.innerWidth <= 640) {
+				window.location.href = 'http://www.cnblogs.com/liliangel';//TODO 暂时跳转到博客
+			}
+		})*/
+    })
+}
+</script>
+</html>
