@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no" >
+    <style type="text/css">
+        /** g区域 m模块 el元素*/
+        @import './static/component/li/li-1.2.0.css';
+
+        @font-face {font-family: "index";
+            src: url('./static/font/index/iconfont.eot?t=1501061705710'); /* IE9*/
+            src: url('./static/font/index/iconfont.eot?t=1501061705710#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./static/font/index/iconfont.woff?t=1501061705710') format('woff'), /* chrome, firefox */
+            url('./static/font/index/iconfont.ttf?t=1501061705710') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+            url('./static/font/index/iconfont.svg?t=1501061705710#iconfont') format('svg'); /* iOS 4.1- */
+          }
+          
+          [class^="icon-"]:before,
+          [class*=" icon-"]:before
+          {
+            font-family:"index" !important;
+            font-size: 1.2rem;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+
+        .icon-jian:before { content: "\e613"; }
+
+        .icon-iconweixin:before { content: "\e720"; }
+
+        .icon-boke3:before { content: "\e60d"; }
+
+        .icon-shouji:before { content: "\e611"; }
+
+        .icon-qq:before { content: "\e62a"; }
+
+        .icon-github:before { content: "\e600"; }
+
+        body,html {
+            margin: 0;
+            padding: 0;
+        }
+        .m-page2 {
+            box-sizing: border-box;
+            padding: 2.8rem;
+        }
+        .li-list {
+            height: 2.46rem;
+            margin-bottom: 1.2rem;
+            padding-left: .28rem;
+            border-radius: .28rem;
+            line-height: 2.46rem;
+            padding-left: 1rem;
+            color: white;
+            font-weight: 500;
+            font-size: .86rem;
+        }
+        .el-mobile {
+            background-color: #f7d560;
+        }
+        .el-wechat {
+            background-color: #8be668;
+        }
+        .el-qq {
+            background-color: #7bb8ef;
+        }
+        .el-jianshu {
+            background-color: #e67979;
+        }
+        .el-blog {
+            background-color: #A29AC3;
+        }
+        .el-git {
+            background-color: #1f1d1d;
+        }
+        .el-jianshu>a,.el-blog>a,.el-git>a {
+            font-size: .46rem;
+            position: absolute;
+            padding-left: 0.28rem;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <article>
+        
+    </article>
+</body>
+
+<script id="MainTpl" type="text/x-template">
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page">
+                
+            </div>
+            <div class="page m-page2">
+                <div class="li-list el-mobile">
+                    <i class="icon-shouji"></i>
+                    <span>手机：17603001616</span>
+                </div>
+                <div class="li-list el-wechat">
+                    <i class="icon-iconweixin"></i>
+                    <span>微信：microman756</span>
+                </div>
+                <div class="li-list el-qq">
+                    <i class="icon-qq"></i>
+                    <span>QQ：46061098</span>
+                </div>
+                <div class="li-list el-jianshu">
+                    <i class="icon-jian"></i>
+                    <a href="http://www.jianshu.com/u/ebb97922b992">http://www.jianshu.com/u/ebb97922b992</a>
+                </div>
+                <div class="li-list el-blog">
+                    <i class="icon-boke3"></i>
+                    <a href="http://www.cnblogs.com/liliangel">http://www.cnblogs.com/liliangel</a>
+                </div>
+                <div class="li-list el-git">
+                    <i class="icon-github"></i>
+                    <a href="https://github.com/helijun">https://github.com/helijun</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+/*if(window.innerWidth <= 640) {
+	window.location.href = 'http://www.cnblogs.com/liliangel';//TODO 暂时跳转到博客
+}*/
+</script>
+<script src="./static/plugin/requirejs/require.min.js?v=20161017"></script>
+<script type="text/javascript">
+var script = document.createElement("script"),
+    head = document.head || document.getElementsByTagName('head')[0];
+
+script.type = "text/javascript";
+script.src = './config.js?ver=' + (new Date()).getTime();
+
+head.appendChild(script); 
+
+script.onload = script.onreadystatechange = function(){
+require(
+    [
+        'jquery',
+        'underscore',
+        'fullpage'
+    ], 
+    function($,_){
+        $('article').html(_.template(MainTpl.innerHTML)({}))
+
+        $('.wp-inner')[0].fullpage({
+            start: 1,
+            drag: true,
+            loop: true
+        });
+
+        /*$('body').css({
+            'height': window.innerHeight
+        })*/
+		
+		/*$(window).resize(function() {
+			if(window.innerWidth <= 640) {
+				window.location.href = 'http://www.cnblogs.com/liliangel';//TODO 暂时跳转到博客
+			}
+		})*/
+    })
+}
+</script>
+</html>
