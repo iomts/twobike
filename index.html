@@ -1,150 +1,238 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no" >
-    <style type="text/css">
-        /** g区域 m模块 el元素*/
-        @import './static/component/li/li-1.2.0.css';
-        body,html {
-            margin: 0;
-            padding: 0;
-        }
-        article {
-            background-image: url('http://upload-images.jianshu.io/upload_images/2166524-eb8b6705ea74a128.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            animation: fade-in 1.5s linear;
-        }
-        .g-avatar {
-            position: absolute;
-            top: 2%;
-            left: 3%;
-            width: 40%;
-            animation: fade-in 1.5s linear;
-            color: white;
-        }
-        .el-avatar {
-            height: 50px;
-            width: 50px;
-            background-image: url('./static/img/avatar.jpg');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            border-radius: 50%;
-            box-shadow: 2px 2px 2px #CCC;
-        }
-        .g-tips-arrow {
-            position: absolute;
-            top: 90%;
-            left: 48%;
-            webkit-animation: bounce-down 1.5s linear infinite;
-            animation: bounce-down 1.5s linear infinite;
-            text-align: center;
-            color: white;
-        }
-        @keyframes bounce-down {
-            25% {transform: translateY(-10px);}
-            50%, 100% {transform: translateY(0);}
-            75% {transform: translateY(10px);}
-        }
-         
-        @keyframes bounce-up {
-            25% {transform: translateY(10px);}
-            50%, 100% {transform: translateY(0);}
-            75% {transform: translateY(-10px);}
-        }
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>微人类 | 一个平凡的人类，总是说着愿做平凡人，其实多么的不甘平凡此生。</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="stylesheet" href="static/plugin/amazeui/css/amazeui.min.css"/>
+  <style>
+    .get {
+      background: #1E5B94;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
 
-        .li-module {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        .li-module1 {
-            background-color: red;
-        }
-        .li-module2 {
-            background-color: blue;
-        }
-        .li-module3 {
-            background-color: pink;
-        }
-    </style>
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #0bb59b;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+  </style>
 </head>
 <body>
-    <header></header>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#">微人类</a>
+    </h1>
 
-    <article>
-        <section class="g-avatar">
-            <div class="li-row">
-                <div class="li-col-15">
-                    <div class="el-avatar"></div>
-                </div>
-                <div class="li-col-85">
-                    <h6>twobike</h6>
-                    <div class="">
-                        <ul class="li-row">
-                            <li class="li-col-20">热爱前端</li>
-                            <li class="li-col-30">JAVA程序员</li>
-                            <li class="li-col-50">自行车爱好者</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="g-tips-arrow">
-            <p class="li-arrow li-arrow-top"></p>
-            <p>敬请期待</p>
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-topbar-right am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><a href="#">首页</a></li>
+        <li><a href="#">博客</a></li>
+        <li><a href="#">感悟</a></li>
+        <li><a href="#">民谣</a></li>
+        <li><a href="#">骑行</a></li>
+        <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            联系我 <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content">
+            <li class="am-dropdown-header">标题</li>
+            <li><a href="#">1. 默认样式</a></li>
+            <li><a href="#">2. 基础设置</a></li>
+            <li><a href="#">3. 文字排版</a></li>
+            <li><a href="#">4. 网格系统</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- <div class="am-topbar-right">
+        <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
+      </div>
+      
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
+      </div> -->
+    </div>
+  </div>
+</header>
+
+<div class="get">
+  <div class="am-g">
+    <div class="col-lg-12">
+      <h1 class="get-title">微人类 - 一个平凡的人类</h1>
+
+      <p>
+        愿做平凡人，开开心心简简单单已极好
+      </p>
+
+      <p>
+        <a href="http://amazeui.org" class="am-btn am-btn-sm get-btn">关于微人类</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="detail">
+  <div class="am-g am-container">
+    <div class="col-lg-12">
+      <h2 class="detail-h2">Coding，Riding，Or Reading. 不是在写代码，就是在骑行的路上</h2>
+
+      <div class="am-g">
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+
+          <h3 class="detail-h3">
+            <i class="am-icon-mobile am-icon-sm"></i>
+            技术博客
+          </h3>
+
+          <p class="detail-p">
+            技术这条路，必须走到黑，不回头。日常的总结，是点点滴滴的进步。以js为核心，java，linux为辅多元化发展，不做偏安一隅的前端，ITer，请跟随兴趣一路前行。
+          </p>
         </div>
-    </article>
-    <!-- <div class="li-module li-module1"></div>
-    <div class="li-module li-module2"></div>
-    <div class="li-module li-module3"></div> -->
-    
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-check-square-o am-icon-sm"></i>
+            感悟
+          </h3>
+        
+          <p class="detail-p">
+            放下对生活的成见，做一个不动声色的人，因为不是所有的鱼都生活在同一片海里。在躁动的青春年纪，那些总以为是迷茫的，不过是某一刻突然安静下来的不知所措而罢，面对复杂，保持欢喜，漫漫余生，满怀期盼。
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-cogs am-icon-sm"></i>
+            民谣
+          </h3>
+          <p class="detail-p">
+            我没有故事，也没有酒，可是我有民谣，虾米音乐--精选集--《民谣中毒》，一起细品民谣，让越来越快的生活节奏放慢几分。
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-cogs am-icon-sm"></i>
+            自行车
+          </h3>
+          <p class="detail-p">
+            没有什么能够阻挡，你对自由的向往~ 开车太快，走路太慢，自行车刚刚好。迎着风，向着朝阳，最好的时光在路上，即刻出发!
+          </p>
+        </div>
+        
+        <!-- <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-send-o am-icon-sm"></i>
+            轻量级，高性能
+          </h3>
+        
+          <p class="detail-p">
+            Amaze UI 非常注重性能，基于轻量的 Zepto.js 开发，并使用 CSS3 来做动画交互，平滑、高效，更适合移动设备，让你的 Web 应用可以高速载入。
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hope">
+  <div class="am-g am-container">
+    <div class="col-lg-4 col-md-6 col-sm-12 hope-img">
+      <img src="static/plugin/amazeui/i/examples/landing.png" alt="" data-am-scrollspy="{animation:'slide-left', repeat: false}">
+      <hr class="am-article-divider am-show-sm-only hope-hr">
+    </div>
+    <div class="col-lg-8 col-md-6 col-sm-12">
+      <h2 class="hope-title">联系微人类</h2>
+
+      <p>
+        在知识爆炸的年代，我们不愿成为知识的过客，拥抱开源，崇尚共享，乐于交流，技术碰撞，共同进步。
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2017 by helijun</p>
+</footer>
+<script src="static/plugin/amazeui/js/zepto.min.js"></script>
+<script src="static/plugin/amazeui/js/amazeui.min.js"></script>
 </body>
-<script type="text/javascript">
-if(window.innerWidth <= 640) {
-	window.location.href = 'http://www.cnblogs.com/liliangel';//TODO 暂时跳转到博客
-}
-</script>
-<script src="./static/component/requirejs/require.min.js?v=20161017"></script>
-<script type="text/javascript">
-var script = document.createElement("script"),
-    head = document.head || document.getElementsByTagName('head')[0];
-
-script.type = "text/javascript";
-script.src = './config.js?ver=' + (new Date()).getTime();
-
-head.appendChild(script); 
-
-script.onload = script.onreadystatechange = function(){
-require(
-    [
-        'jquery',
-        'fastclick',
-        'artTemplate'
-    ], 
-    function($,FastClick,template){
-        console.log('$',$)
-
-        $('body').css({
-            'height': window.innerHeight
-        })
-		
-		$(window).resize(function() {
-			if(window.innerWidth <= 640) {
-				window.location.href = 'http://www.cnblogs.com/liliangel';//TODO 暂时跳转到博客
-			}
-		})
-    })
-}
-</script>
 </html>

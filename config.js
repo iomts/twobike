@@ -6,6 +6,7 @@ require.config({
     paths: {
     	jquery:'component/jquery/jquery-3.1.0.min',
         fastclick: 'component/jquery/fastclick',
+        amazeui: 'plugin/amazeui/js/amazeui.min',
         fullpage: 'plugin/fullpage/fullpage',
         artTemplate: 'component/template/artTemplate-3.0',
         underscore: 'plugin/underscore/underscore',
