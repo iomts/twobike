@@ -109,61 +109,110 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-
-    .icon-jian:before { 
-        content: "\e613"; 
-        color: #e67979;
-    }
-    .icon-jian:hover { 
-        color: #ffe793;
-    }
-
-
-    .icon-iconweixin:before { 
-        content: "\e720"; 
-        color: #236f06;
-    }
-
-    .icon-boke3:before { 
-        content: "\e60d"; 
-        color: #eaeaff;
-    }
     
+    .m-blog,.m-ganwu,.m-minyao,.m-bike {
+        transition: all 1s;
+        cursor: pointer;
+    }
+    .m-blog:hover,
+    .m-ganwu:hover,
+    .m-minyao:hover,
+    .m-bike:hover {
+        transform: scale(1.1154);
+        transition: all 1s;
+        box-shadow: 10px 10px 10px #CCC;
+    }
+
     .icon-shouji {
         color: #f7d560;
     }
     .icon-shouji:before { 
         content: "\e611";
     }
-    .icon-shouji:hover { 
-        transition: 0.61s;
+    .el-phone:hover { 
+        animation: scale-big 2s;
         color: #fbe8a6; 
     }
-
-    .icon-qq:before { 
-        content: "\e62a";
+    
+    .icon-iconweixin {
+        color: #236f06;
+    }
+    .icon-iconweixin:before { 
+        content: "\e720"; 
+    }
+    .el-wechat:hover {
+        animation: rotate 1s;
+        color: #49ea0b;
+    }
+    
+    .icon-qq {
         color: #0269c5;
     }
-
+    .icon-qq:before { 
+        content: "\e62a";
+        /* font-size: 4.345rem; */
+    }
+    .el-qq:hover {
+        animation: scale-small 1s;
+        color: #0087ff;
+    }
+    
+    .icon-github { 
+        color: black;
+    }
     .icon-github:before { 
         content: "\e600";
-        color: black;
-
+    }
+    .el-github:hover { 
+        animation: scale-big 1.5s;
+    }
+    
+    .icon-boke3 { 
+        color: #eaeaff;
+    }
+    .icon-boke3:before { 
+        content: "\e60d"; 
+    }
+    .el-blog:hover {
+        animation: scale-big 1.5s;
+        color: white;
+    }
+    
+    .icon-jian { 
+        color: #e67979;
+    }
+    .icon-jian:before { 
+        content: "\e613"; 
+    }
+    .el-jianshu:hover { 
+        animation: rotate 0.5s;
     }
 
     /** 放大、缩小 */
-    @-webkit-keyframes scale {
+    @-webkit-keyframes scale-small {
         0% { 
-            -webkit-transform: scale(0.0)
+            -webkit-transform: scale(1.0)
         }
         50% { 
-            -webkit-transform: scale(0.6) 
+            -webkit-transform: scale(0.8) 
         }
         50%, 80%, 100% { 
-            -webkit-transform: scale(1.0) 
+            -webkit-transform: scale(0.46) 
         }
     }
 
+    @-webkit-keyframes scale-big {
+        0% { 
+            -webkit-transform: scale(1.0)
+        }
+        50% { 
+            -webkit-transform: scale(1.2) 
+        }
+        50%, 80%, 100% { 
+            -webkit-transform: scale(1.46) 
+        }
+    }
+    
     @-webkit-keyframes rotate {  
         0% { 
             -webkit-transform: rotate(0deg)  
@@ -188,7 +237,7 @@
     <div class="am-topbar-right am-collapse am-topbar-collapse" id="collapse-head">
       <ul class="am-nav am-nav-pills am-topbar-nav">
         <li class="am-active"><a href="#">首页</a></li>
-        <li><a href="#">博客</a></li>
+        <li><a href="http://www.cnblogs.com/liliangel" target="_blank">博客</a></li>
         <li><a href="#">感悟</a></li>
         <li><a href="#">民谣</a></li>
         <li><a href="#">骑行</a></li>
@@ -239,20 +288,19 @@
       <h2 class="detail-h2">Coding，Riding，Or Reading. 不是在写代码，就是在骑行的路上</h2>
 
       <div class="am-g">
-        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
-
+        <a href="http://www.cnblogs.com/liliangel" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-blog">
           <h3 class="detail-h3">
-            <i class="am-icon-mobile am-icon-sm"></i>
+            <i class="am-icon-mobile am-icon-newspaper-o"></i>
             技术博客
           </h3>
-
           <p class="detail-p">
             技术这条路，必须走到黑，不回头。日常的总结，是点点滴滴的进步。以js为核心，java，linux为辅多元化发展，不做偏安一隅的前端，ITer，请跟随兴趣一路前行。
           </p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+        </a>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb m-ganwu">
           <h3 class="detail-h3">
-            <i class="am-icon-check-square-o am-icon-sm"></i>
+            <i class="am-icon-check-square-o am-icon-newspaper-o"></i>
             感悟
           </h3>
         
@@ -260,18 +308,18 @@
             放下对生活的成见，做一个不动声色的人，因为不是所有的鱼都生活在同一片海里。在躁动的青春年纪，那些总以为是迷茫的，不过是某一刻突然安静下来的不知所措而罢，面对复杂，保持欢喜，漫漫余生，满怀期盼。
           </p>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb m-minyao">
           <h3 class="detail-h3">
-            <i class="am-icon-cogs am-icon-sm"></i>
+            <i class="am-icon-cogs am-icon-newspaper-o"></i>
             民谣
           </h3>
           <p class="detail-p">
             我没有故事，也没有酒，可是我有民谣，虾米音乐--精选集--《民谣中毒》，一起细品民谣，让越来越快的生活节奏放慢几分。
           </p>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb m-bike">
           <h3 class="detail-h3">
-            <i class="am-icon-cogs am-icon-sm"></i>
+            <i class="am-icon-cogs am-icon-bicycle"></i>
             自行车
           </h3>
           <p class="detail-p">
@@ -297,28 +345,24 @@
 <div class="hope">
   <div class="am-g am-container">
     <div class="col-lg-8 col-md-8 col-sm-12 am-text-center" data-am-scrollspy="{animation:'slide-left', repeat: false}">
-        <a href='tel:17603001616' class="col-lg-2 col-md-4 col-sm-6">
+        <a href='tel:17603001616' class="col-lg-2 col-md-4 col-sm-6 el-phone" title="手机号码">
             <i class="icon-shouji"></i>
-            <!-- <span>手机：17603001616</span> -->
         </a>
-        <div class="col-lg-2 col-md-4 col-sm-6">
+        <a class="col-lg-2 col-md-4 col-sm-6 el-wechat" title="微信" id="wechatEl" data-id="microman756">
             <i class="icon-iconweixin"></i>
-            <!-- <span>微信：microman756</span> -->
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-6">
+        </a>
+        <a class="col-lg-2 col-md-4 col-sm-6 el-qq" title="QQ" id="qqEL" data-id="46061098">
             <i class="icon-qq"></i>
-            <!-- <span>QQ：46061098</span> -->
-        </div>
-        <a href="https://github.com/helijun" target="_blank" class="col-lg-2 col-md-4 col-sm-6">
+        </a>
+        <a href="https://github.com/helijun" title="github" target="_blank" class="col-lg-2 col-md-4 col-sm-6 el-github">
             <i class="icon-github"></i>
         </a>
-        <a href="http://www.cnblogs.com/liliangel" target="_blank" class="col-lg-2 col-md-4 col-sm-6">
+        <a href="http://www.cnblogs.com/liliangel" title="博客园" target="_blank" class="col-lg-2 col-md-4 col-sm-6 el-blog">
             <i class="icon-boke3"></i>
         </a>
-        <a  href="http://www.jianshu.com/u/ebb97922b992" target="_blank" class="col-lg-2 col-md-4 col-sm-6">
+        <a  href="http://www.jianshu.com/u/ebb97922b992" title="简书" target="_blank" class="col-lg-2 col-md-4 col-sm-6 el-jianshu">
             <i class="icon-jian"></i>
         </a>
-
       <hr class="am-article-divider am-show-sm-only hope-hr">
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -336,12 +380,14 @@
 <script src="static/plugin/amazeui/js/zepto.min.js"></script>
 <script src="static/plugin/amazeui/js/amazeui.min.js"></script>
 <script>
-    $.AMUI.progress.start();
+    if(window.innerWidth > 750) {
+        $.AMUI.progress.start();
 
-    //TODO
-    setTimeout(function(){
-        $.AMUI.progress.done();
-    },500)
+        //TODO
+        setTimeout(function(){
+            $.AMUI.progress.done();
+        },500)
+    }
 </script>
 </body>
 </html>
