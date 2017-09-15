@@ -91,6 +91,87 @@
       text-align: center;
       background: #2d3e50;
     }
+
+    @font-face {font-family: "index";
+        src: url('./static/font/index/iconfont.eot?t=1501061705710'); /* IE9*/
+        src: url('./static/font/index/iconfont.eot?t=1501061705710#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./static/font/index/iconfont.woff?t=1501061705710') format('woff'), /* chrome, firefox */
+        url('./static/font/index/iconfont.ttf?t=1501061705710') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        url('./static/font/index/iconfont.svg?t=1501061705710#iconfont') format('svg'); /* iOS 4.1- */
+      }
+      
+      [class^="icon-"]:before,
+      [class*=" icon-"]:before
+      {
+        font-family:"index" !important;
+        font-size: 4rem;
+        font-style:normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+    .icon-jian:before { 
+        content: "\e613"; 
+        color: #e67979;
+    }
+    .icon-jian:hover { 
+        color: #ffe793;
+    }
+
+
+    .icon-iconweixin:before { 
+        content: "\e720"; 
+        color: #236f06;
+    }
+
+    .icon-boke3:before { 
+        content: "\e60d"; 
+        color: #eaeaff;
+    }
+    
+    .icon-shouji {
+        color: #f7d560;
+    }
+    .icon-shouji:before { 
+        content: "\e611";
+    }
+    .icon-shouji:hover { 
+        transition: 0.61s;
+        color: #fbe8a6;
+        animation: rotate 0.2s;
+    }
+
+    .icon-qq:before { 
+        content: "\e62a";
+        color: #0269c5;
+    }
+
+    .icon-github:before { 
+        content: "\e600";
+
+    }
+
+    /** 放大、缩小 */
+    @-webkit-keyframes scale {
+        0% { 
+            -webkit-transform: scale(0.0)
+        }
+        50% { 
+            -webkit-transform: scale(0.6) 
+        }
+        50%, 80%, 100% { 
+            -webkit-transform: scale(1.0) 
+        }
+    }
+
+    @-webkit-keyframes rotate {  
+        0% { 
+            -webkit-transform: rotate(0deg)  
+        }
+        100% { 
+            -webkit-transform: rotate(360deg)  
+        }
+    }
   </style>
 </head>
 <body>
@@ -215,11 +296,35 @@
 
 <div class="hope">
   <div class="am-g am-container">
-    <div class="col-lg-4 col-md-6 col-sm-12 hope-img">
-      <img src="static/plugin/amazeui/i/examples/landing.png" alt="" data-am-scrollspy="{animation:'slide-left', repeat: false}">
+    <div class="col-lg-8 col-md-8 col-sm-12 am-text-center" data-am-scrollspy="{animation:'slide-left', repeat: false}">
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <i class="icon-shouji"></i>
+            <!-- <span>手机：17603001616</span> -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <i class="icon-iconweixin"></i>
+            <!-- <span>微信：microman756</span> -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <i class="icon-qq"></i>
+            <!-- <span>QQ：46061098</span> -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <i class="icon-github"></i>
+            <!-- <a href="http://www.jianshu.com/u/ebb97922b992">http://www.jianshu.com/u/ebb97922b992</a> -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <i class="icon-boke3"></i>
+            <!-- <a href="http://www.jianshu.com/u/ebb97922b992">http://www.jianshu.com/u/ebb97922b992</a> -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <i class="icon-jian"></i>
+            <!-- <a href="https://github.com/helijun">https://github.com/helijun</a> -->
+        </div>
+
       <hr class="am-article-divider am-show-sm-only hope-hr">
     </div>
-    <div class="col-lg-8 col-md-6 col-sm-12">
+    <div class="col-lg-4 col-md-4 col-sm-12">
       <h2 class="hope-title">联系微人类</h2>
 
       <p>
