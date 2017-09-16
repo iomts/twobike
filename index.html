@@ -240,7 +240,7 @@
 </head>
 
 <body>
-<!-- 为了SEO妥协处理，TODO服务端渲染 -->
+  <!-- 为了SEO妥协处理，TODO服务端渲染 -->
   <header class="am-topbar am-topbar-fixed-top" data-am-scrollspy="{animation:'slide-top'}">
     <div class="am-container">
       <h1 class="am-topbar-brand">
@@ -252,17 +252,18 @@
         <ul class="am-nav am-nav-pills am-topbar-nav">
           <li class="am-active"><a href="#">首页</a></li>
           <li><a href="./blogs/index.html" target="_blank">博客</a></li>
-          <li><a href="#">感悟</a></li>
-          <li><a href="#">民谣</a></li>
-          <li><a href="#">骑行</a></li>
+          <li><a href="./info/1024.html" target="_blank">感悟</a></li>
+          <li><a href="http://www.xiami.com/collect/162245539" target="_blank">民谣</a></li>
+          <li><a href="./info/1024.html" target="_blank">骑行</a></li>
           <li class="am-dropdown" data-am-dropdown>
             <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
             其他 <span class="am-icon-caret-down"></span>
           </a>
             <ul class="am-dropdown-content">
               <li class="am-dropdown-header"></li>
-              <li><a href="#">1. 个人书单</a></li>
-              <li><a href="//www.cnblogs.com/liliangel/p/6732507.html">2. 最新文章</a></li>
+              <li><a href="./book/index.html" target="_blank">1. 个人书单</a></li>
+              <li><a href="./react/index.html" target="_blank">2. React学习</a></li>
+              <li><a href="//www.cnblogs.com/liliangel/p/6732507.html" target="_blank">3. 最新文章</a></li>
             </ul>
           </li>
         </ul>
@@ -278,7 +279,7 @@
           愿做平凡人，开开心心简简单单已极好
         </p>
         <p data-am-scrollspy="{animation:'slide-top'}">
-        <a href="#" class="am-btn am-btn-sm get-btn">关于微人类</a>
+          <a href="#" class="am-btn am-btn-sm get-btn">关于微人类</a>
         </p>
       </div>
     </div>
@@ -325,7 +326,7 @@
               没有什么能够阻挡，你对自由的向往~ 开车太快，走路太慢，自行车刚刚好。迎着风，向着朝阳，最好的时光在路上，即刻出发!
             </p>
           </a>
-          
+
         </div>
       </div>
     </div>
@@ -365,37 +366,38 @@
   <footer class="footer" data-am-scrollspy="{animation:'slide-top', repeat: true}">
     <p>© 2017 by helijun</p>
   </footer>
-<script src="./static/component/requirejs/require.min.js?v=20170916"></script>
-<script type="text/javascript">
-var script = document.createElement("script"),
-    head = document.head || document.getElementsByTagName('head')[0];
+  <script src="./static/component/requirejs/require.min.js?v=20170916"></script>
+  <script type="text/javascript">
+    var script = document.createElement("script"),
+      head = document.head || document.getElementsByTagName('head')[0];
 
-script.type = "text/javascript";
-script.src = './config.js?ver=' + (new Date()).getTime();
+    script.type = "text/javascript";
+    script.src = './config.js?ver=' + (new Date()).getTime();
 
-head.appendChild(script); 
+    head.appendChild(script);
 
-script.onload = script.onreadystatechange = function(){
-require(
-    [
-        'zepto',
-        'amazeui'
-    ], 
-    function(){
-        console.log('$.AMUI',$.AMUI)
-        if (window.innerWidth > 750) {
-          $.AMUI.progress.start();
-    
-          //TODO
-          setTimeout(function () {
-            $.AMUI.progress.done();
-          }, 500)
-        }
-    
-        
-    })
-}
-</script>
+    script.onload = script.onreadystatechange = function () {
+      require(
+        [
+          'zepto',
+          'amazeui'
+        ],
+        function () {
+          console.log('$.AMUI', $.AMUI)
+          if (window.innerWidth > 750) {
+            $.AMUI.progress.start();
+
+            //TODO
+            setTimeout(function () {
+              $.AMUI.progress.done();
+            }, 500)
+          }
+
+
+        })
+    }
+
+  </script>
 </body>
 
 </html>
