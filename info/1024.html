@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>敬请期待</title>
+  <meta name="keywords" content="微人类，何立军的个人网站，何立军的博客">
+  <meta name="description" content="何立军的个人站点，包括了一些技术博客，随心感悟，平时喜欢听的民谣，还有一些骑行的碎影，再或是读过的书单。">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="stylesheet" href="../static/plugin/amazeui/css/amazeui.min.css" />
+  <style>
+    .footer p {
+      color: #7f8c8d;
+      margin: 100px 0 0 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+  </style>
+</head>
+
+<body>
+<!-- 为了SEO妥协处理，TODO服务端渲染 -->
+  <header class="am-topbar am-topbar-fixed-top am-animation-slide-top">
+    <div class="am-container">
+      <h1 class="am-topbar-brand">
+        <a href="//www.twobike.cn">微人类</a>
+      </h1>
+      <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+      <div class="am-topbar-right am-collapse am-topbar-collapse" id="collapse-head">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+          <li class="am-active"><a href="#">首页</a></li>
+          <li><a href="./blogs/index.html" target="_blank">博客</a></li>
+          <li><a href="#">感悟</a></li>
+          <li><a href="#">民谣</a></li>
+          <li><a href="#">骑行</a></li>
+          <li class="am-dropdown" data-am-dropdown>
+            <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            其他 <span class="am-icon-caret-down"></span>
+          </a>
+            <ul class="am-dropdown-content">
+              <li class="am-dropdown-header"></li>
+              <li><a href="#">1. 个人书单</a></li>
+              <li><a href="//www.cnblogs.com/liliangel/p/6732507.html">2. 最新文章</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">1024</strong> / <small>Please look for it!</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="col-sm-12">
+        <h2 class="am-text-center am-text-xxxl am-margin-top-lg">Page Will Finish</h2>
+        <p class="am-text-center">页面开发中，敬请期待</p>
+        <pre class="page-404 am-text-center">
+                .----.
+             _.'__    `.
+         .--($)($$)---/#\
+       .' @          /###\
+       :         ,   #####
+        `-..__.-' _.-\###/
+              `;_:    `"'
+            .'"""""`.
+           /,   haha ,\\
+          //  敬请期待!  \\
+          `-._______.-'
+          ___`. | .'___
+         (______|______)
+              </pre>
+      </div>
+    </div>
+  </div>
+  <!-- content end -->
+      
+  <footer class="footer">
+    <p>© 2017 by helijun</p>
+  </footer>
+  
+</body>
+
+<script src="/static/component/requirejs/require.min.js?v=20170916"></script>
+<script type="text/javascript">
+var script = document.createElement("script"),
+    head = document.head || document.getElementsByTagName('head')[0];
+
+script.type = "text/javascript";
+script.src = '/config.js?ver=' + (new Date()).getTime();
+
+head.appendChild(script); 
+
+script.onload = script.onreadystatechange = function(){
+require(
+    [
+        'zepto',
+        'amazeui'
+    ], 
+    function(){
+        console.log('$.AMUI',$.AMUI)
+        if (window.innerWidth > 750) {
+          $.AMUI.progress.start();
+    
+          //TODO
+          setTimeout(function () {
+            $.AMUI.progress.done();
+          }, 500)
+        }
+    
+        
+    })
+}
+</script>
+</html>

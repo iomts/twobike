@@ -1,0 +1,8 @@
+.m-blog:hover,
+.m-ganwu:hover,
+.m-minyao:hover,
+.m-bike:hover {
+  transform: scale(1.1154);
+  transition: all 1s;
+  box-shadow: 10px 10px 10px #CCC;
+}

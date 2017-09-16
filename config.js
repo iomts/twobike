@@ -2,9 +2,10 @@ var _VER = (new Date()).getTime();//开发，测试环境
 //_VER = 2016120005;//生产环境
 require.config({
 	urlArgs: "v=" +  _VER,
-	baseUrl : "./static/",
+	baseUrl : "/static/",
     paths: {
-    	jquery:'component/jquery/jquery-3.1.0.min',
+        jquery:'component/jquery/jquery-3.1.0.min',
+        zepto: 'plugin/amazeui/js/zepto.min',
         fastclick: 'component/jquery/fastclick',
         amazeui: 'plugin/amazeui/js/amazeui.min',
         fullpage: 'plugin/fullpage/fullpage',
