@@ -241,7 +241,7 @@
 
 <body>
 <!-- 为了SEO妥协处理，TODO服务端渲染 -->
-  <header class="am-topbar am-topbar-fixed-top am-animation-slide-top">
+  <header class="am-topbar am-topbar-fixed-top" data-am-scrollspy="{animation:'slide-top'}">
     <div class="am-container">
       <h1 class="am-topbar-brand">
         <a href="//www.twobike.cn">微人类</a>
@@ -270,27 +270,27 @@
     </div>
   </header>
 
-  <div class="get am-animation-fade am-animation-scale-up">
+  <div class="get am-animation-fade">
     <div class="am-g">
       <div class="col-lg-12">
-        <h1 class="get-title">微人类 - 一个平凡的人类</h1>
-        <p>
+        <h1 class="get-title" data-am-scrollspy="{animation:'slide-top'}">微人类 - 一个平凡的人类</h1>
+        <p data-am-scrollspy="{animation:'slide-top'}">
           愿做平凡人，开开心心简简单单已极好
         </p>
-        <p>
+        <p data-am-scrollspy="{animation:'slide-top'}">
         <a href="#" class="am-btn am-btn-sm get-btn">关于微人类</a>
         </p>
       </div>
     </div>
   </div>
 
-  <div class="detail am-animation-slide-bottom">
+  <div class="detail">
     <div class="am-g am-container">
       <div class="col-lg-12">
-        <h2 class="detail-h2">Coding，Riding，Or Reading. 不是在写代码，就是在骑行的路上</h2>
+        <h2 class="detail-h2" data-am-scrollspy="{animation:'slide-top'}">Coding，Riding，Or Reading. 不是在写代码，就是在骑行的路上</h2>
         <div class="am-g">
 
-          <a href="./blogs/index.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-blog">
+          <a href="./blogs/index.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-blog" data-am-scrollspy="{animation:'slide-left'}">
             <h3 class="detail-h3">
               <i class="am-icon-mobile am-icon-newspaper-o"></i> 技术博客
             </h3>
@@ -299,7 +299,7 @@
             </p>
           </a>
 
-          <a href="./info/1024.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-ganwu">
+          <a href="./info/1024.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-ganwu" data-am-scrollspy="{animation:'slide-left'}">
             <h3 class="detail-h3">
               <i class="am-icon-check-square-o am-icon-newspaper-o"></i> 感悟
             </h3>
@@ -308,7 +308,7 @@
             </p>
           </a>
 
-          <a href="http://www.xiami.com/collect/162245539" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-minyao">
+          <a href="http://www.xiami.com/collect/162245539" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-minyao" data-am-scrollspy="{animation:'slide-right'}">
             <h3 class="detail-h3">
               <i class="am-icon-cogs am-icon-newspaper-o"></i> 民谣
             </h3>
@@ -317,7 +317,7 @@
             </p>
           </a>
 
-          <a href="./info/1024.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-bike">
+          <a href="./info/1024.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-bike" data-am-scrollspy="{animation:'slide-right'}">
             <h3 class="detail-h3">
               <i class="am-icon-cogs am-icon-bicycle"></i> 自行车
             </h3>
@@ -325,7 +325,7 @@
               没有什么能够阻挡，你对自由的向往~ 开车太快，走路太慢，自行车刚刚好。迎着风，向着朝阳，最好的时光在路上，即刻出发!
             </p>
           </a>
-
+          
         </div>
       </div>
     </div>
@@ -333,7 +333,7 @@
 
   <div class="hope">
     <div class="am-g am-container">
-      <div class="col-lg-8 col-md-8 col-sm-12 am-text-center" data-am-scrollspy="{animation:'slide-left', repeat: false}">
+      <div class="col-lg-8 col-md-8 col-sm-12 am-text-center" data-am-scrollspy="{animation:'slide-left', repeat: true}">
         <a href='tel:17603001616' class="col-lg-2 col-md-4 col-sm-6 el-phone" title="手机号码">
             <i class="icon-shouji"></i>
         </a>
@@ -354,7 +354,7 @@
         </a>
         <hr class="am-article-divider am-show-sm-only hope-hr">
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-sm-12" data-am-scrollspy="{animation:'slide-right', repeat: true}">
         <h2 class="hope-title">联系微人类</h2>
         <p>
           在知识爆炸的年代，我们不愿成为知识的过客，拥抱开源，崇尚共享，乐于交流，技术碰撞，共同进步。
@@ -362,7 +362,7 @@
       </div>
     </div>
   </div>
-  <footer class="footer">
+  <footer class="footer" data-am-scrollspy="{animation:'slide-top', repeat: true}">
     <p>© 2017 by helijun</p>
   </footer>
 <script src="./static/component/requirejs/require.min.js?v=20170916"></script>
