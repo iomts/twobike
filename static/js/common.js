@@ -209,7 +209,15 @@
                     TWOBIKE.commonError()
                 }
             })
-        },
+		},
+		
+		/**
+		 * 添加icon
+		 */
+		addFavoriteIcon: function(){
+			var icon = '<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />';
+			document.getElementsByTagName("head")[0].appendChild(icon);
+		},
 
 	    //所有全局事件监听
 	    watch: function(){
@@ -226,6 +234,8 @@
 	        })
 	    }
 	}
+
+	
 
 	if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
 		define(function() {
