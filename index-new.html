@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>微人类 | 一个平凡的人类，总是说着愿做平凡人，其实多么的不甘平凡此生。</title>
+  <meta name="keywords" content="微人类，何立军的个人网站，何立军的博客">
+  <meta name="description" content="何立军的个人站点，包括了一些技术博客，随心感悟，平时喜欢听的民谣，还有一些骑行的碎影，再或是读过的书单。">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="static/plugin/amazeui/css/amazeui.min.css" />
+  <style>
+    .am-topbar-brand a img {
+      height: 50%;
+      width: 60%;
+    }
+    .get {
+      background: #1E5B94;
+      background: url('/static/img/index/banner-min.png') no-repeat;
+      background-size: 100% 100%;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #0bb59b;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+
+    @font-face {
+      font-family: "index";
+      src: url('./static/font/index/iconfont.eot?t=1501061705710');
+      /* IE9*/
+      src: url('./static/font/index/iconfont.eot?t=1501061705710#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('./static/font/index/iconfont.woff?t=1501061705710') format('woff'), /* chrome, firefox */
+      url('./static/font/index/iconfont.ttf?t=1501061705710') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+      url('./static/font/index/iconfont.svg?t=1501061705710#iconfont') format('svg');
+      /* iOS 4.1- */
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+      font-family: "index" !important;
+      font-size: 4rem;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .m-blog,
+    .m-ganwu,
+    .m-minyao,
+    .m-bike {
+      transition: all 1s;
+      cursor: pointer;
+    }
+
+    .icon-shouji {
+      color: #f7d560;
+    }
+
+    .icon-shouji:before {
+      content: "\e611";
+    }
+
+    .el-phone:hover {
+      animation: scale-big 2s;
+      color: #fbe8a6;
+    }
+
+    .icon-iconweixin {
+      color: #236f06;
+    }
+
+    .icon-iconweixin:before {
+      content: "\e720";
+    }
+
+    .el-wechat:hover {
+      animation: rotate 1s;
+      color: #49ea0b;
+    }
+
+    .icon-qq {
+      color: #0269c5;
+    }
+
+    .icon-qq:before {
+      content: "\e62a";
+      /* font-size: 4.345rem; */
+    }
+
+    .el-qq:hover {
+      animation: rotate 0.5s;
+      color: #0087ff;
+    }
+
+    .icon-github {
+      color: black;
+    }
+
+    .icon-github:before {
+      content: "\e600";
+    }
+
+    .el-github:hover {
+      animation: scale-big 1.5s;
+    }
+
+    .icon-boke3 {
+      color: #eaeaff;
+    }
+
+    .icon-boke3:before {
+      content: "\e60d";
+    }
+
+    .el-blog:hover {
+      animation: scale-big 1.5s;
+      color: white;
+    }
+
+    .icon-jian {
+      color: #e67979;
+    }
+
+    .icon-jian:before {
+      content: "\e613";
+    }
+
+    .el-jianshu:hover {
+      animation: rotate 0.5s;
+    }
+    /** 放大、缩小 */
+
+    @-webkit-keyframes scale-small {
+      0% {
+        -webkit-transform: scale(1.0)
+      }
+      50% {
+        -webkit-transform: scale(0.8)
+      }
+      50%,
+      80%,
+      100% {
+        -webkit-transform: scale(0.46)
+      }
+    }
+
+    @-webkit-keyframes scale-big {
+      0% {
+        -webkit-transform: scale(1.0)
+      }
+      50% {
+        -webkit-transform: scale(1.2)
+      }
+      50%,
+      80%,
+      100% {
+        -webkit-transform: scale(1.46)
+      }
+    }
+
+    @-webkit-keyframes rotate {
+      0% {
+        -webkit-transform: rotate(0deg)
+      }
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 为了SEO妥协处理，TODO服务端渲染 -->
+  <header class="am-topbar am-topbar-fixed-top am-animation-slide-top">
+    <div class="am-container">
+      <h1 class="am-topbar-brand">
+        <a href="//www.twobike.cn">
+          <img src="/static/img/index/w-wrl.png" alt="">
+        </a>
+      </h1>
+      <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+      <div class="am-topbar-right am-collapse am-topbar-collapse" id="collapse-head">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+          <li class="am-active"><a href="#">首页</a></li>
+          <li><a href="./blogs/index.html" target="_blank">博客</a></li>
+          <li><a href="./life/index.html" target="_blank">感悟</a></li>
+          <li><a href="http://www.xiami.com/collect/162245539" target="_blank">民谣</a></li>
+          <li><a href="./info/1024.html" target="_blank">骑行</a></li>
+          <li class="am-dropdown" data-am-dropdown>
+            <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            其他 <span class="am-icon-caret-down"></span>
+          </a>
+            <ul class="am-dropdown-content">
+              <li class="am-dropdown-header"></li>
+              <li><a href="./book/index.html" target="_blank">1. 个人书单</a></li>
+              <li><a href="./react/index.html" target="_blank">2. React学习</a></li>
+              <li><a href="//www.cnblogs.com/liliangel/p/6732507.html" target="_blank">3. 最新文章</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="get am-animation-fade am-animation-slide-top tb-index-banner" id="tbIndexBanner">
+    <div class="am-g">
+      <!-- <div class="col-lg-12">
+        <h1 class="get-title">微人类 - 一个平凡的人类</h1>
+        <p>
+          愿做平凡人，开开心心简简单单已极好
+        </p>
+        <p>
+          <a href="#" class="am-btn am-btn-sm get-btn">关于微人类</a>
+        </p>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="detail">
+    <div class="am-g am-container">
+      <div class="col-lg-12">
+        <h2 class="detail-h2" data-am-scrollspy="{animation:'slide-top'}">Coding，Riding，Or Reading. 不是在写代码，就是在骑行的路上</h2>
+        <div class="am-g">
+
+          <a href="./blogs/index.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-blog" data-am-scrollspy="{animation:'slide-left'}">
+            <h3 class="detail-h3">
+              <i class="am-icon-mobile am-icon-newspaper-o"></i> 技术博客
+            </h3>
+            <p class="detail-p">
+              技术这条路，必须走到黑，不回头。日常的总结，是点点滴滴的进步。以js为核心，java，linux为辅多元化发展，不做偏安一隅的前端，ITer，请跟随兴趣一路前行。
+            </p>
+          </a>
+
+          <a href="./life/index.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-ganwu" data-am-scrollspy="{animation:'slide-left'}">
+            <h3 class="detail-h3">
+              <i class="am-icon-check-square-o am-icon-newspaper-o"></i> 感悟
+            </h3>
+            <p class="detail-p">
+              放下对生活的成见，做一个不动声色的人，因为不是所有的鱼都生活在同一片海里。在躁动的青春年纪，那些总以为是迷茫的，不过是某一刻突然安静下来的不知所措而罢，面对复杂，保持欢喜，漫漫余生，满怀期盼。
+            </p>
+          </a>
+
+          <a href="http://www.xiami.com/collect/162245539" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-minyao" data-am-scrollspy="{animation:'slide-right'}">
+            <h3 class="detail-h3">
+              <i class="am-icon-cogs am-icon-newspaper-o"></i> 民谣
+            </h3>
+            <p class="detail-p">
+              我没有故事，也没有酒，可是我有民谣，虾米音乐--精选集--《民谣中毒》，一起细品民谣，让越来越快的生活节奏放慢几分。
+            </p>
+          </a>
+
+          <a href="./info/1024.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-bike" data-am-scrollspy="{animation:'slide-right'}">
+            <h3 class="detail-h3">
+              <i class="am-icon-cogs am-icon-bicycle"></i> 自行车
+            </h3>
+            <p class="detail-p">
+              没有什么能够阻挡，你对自由的向往~ 开车太快，走路太慢，自行车刚刚好。迎着风，向着朝阳，最好的时光在路上，即刻出发!
+            </p>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hope">
+    <div class="am-g am-container">
+      <div class="col-lg-8 col-md-8 col-sm-12 am-text-center" data-am-scrollspy="{animation:'slide-left', repeat: true}">
+        <a href='tel:17603001616' class="col-lg-2 col-md-4 col-sm-6 el-phone" title="手机号码">
+            <i class="icon-shouji"></i>
+        </a>
+        <a class="col-lg-2 col-md-4 col-sm-6 el-wechat" title="微信" id="wechatEl" data-id="microman756">
+            <i class="icon-iconweixin"></i>
+        </a>
+        <a class="col-lg-2 col-md-4 col-sm-6 el-qq" title="QQ" id="qqEL" data-id="46061098">
+            <i class="icon-qq"></i>
+        </a>
+        <a href="https://github.com/helijun" title="github" target="_blank" class="col-lg-2 col-md-4 col-sm-6 el-github">
+            <i class="icon-github"></i>
+        </a>
+        <a href="http://www.cnblogs.com/liliangel" title="博客园" target="_blank" class="col-lg-2 col-md-4 col-sm-6 el-blog">
+            <i class="icon-boke3"></i>
+        </a>
+        <a href="http://www.jianshu.com/u/ebb97922b992" title="简书" target="_blank" class="col-lg-2 col-md-4 col-sm-6 el-jianshu">
+            <i class="icon-jian"></i>
+        </a>
+        <hr class="am-article-divider am-show-sm-only hope-hr">
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12" data-am-scrollspy="{animation:'slide-right', repeat: true}">
+        <h2 class="hope-title">联系微人类</h2>
+        <p>
+          在知识爆炸的年代，我们不愿成为知识的过客，拥抱开源，崇尚共享，乐于交流，技术碰撞，共同进步。
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer" data-am-scrollspy="{animation:'slide-top', repeat: true}">
+    <p>© 2017 by helijun</p>
+  </footer>
+  <script src="/static/plugin/amazeui/js/zepto.min.js"></script>
+  <script src="/static/plugin/amazeui/js/amazeui.min.js"></script>
+  <script src="/static/js/common.js"></script>
+  <script type="text/javascript">
+    var $width = window.innerWidth;
+    var $height = window.innerWidth;
+    $('#tbIndexBanner').css({
+      height: $width*510/1920
+    })
+    if ($width > 750) {
+      $.AMUI.progress.start();
+
+      TWOBIKE.loadCss('/static/css/index-pc.css', function () {
+        $.AMUI.progress.done();
+      })
+    }
+
+  </script>
+</body>
+
+</html>
