@@ -162,6 +162,9 @@
             animation: scale-big 1.5s;
             color: #0087ff;
         }
+        .icon-qq-share:before {
+            content: "\e62a";
+        }
 
         .icon-github {
             color: black;
@@ -359,6 +362,7 @@
                 <p>
                     在知识爆炸的年代，我们不愿成为知识的过客，拥抱开源，崇尚共享，乐于交流，技术碰撞，共同进步。
                 </p>
+                <p id='cnzz_stat_icon_1271283375'></p>
             </div>
         </div>
     </div>
@@ -401,9 +405,14 @@
                     })
                 }
 
-                this.wacth()
+                this.wacth();
+                this.addCnzz();
             },
 
+            addCnzz: function(){
+                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271283375%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+            },
             wacth: function () {
                 $(document)
                     .on('click', '.icon-qq', function () {
@@ -415,17 +424,6 @@
             }
         }
         TWOBIKE.index.init();
-
-    </script>
-    <!-- 百度统计 -->
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?f59305fcdc6f3dac6f71c38521b0dbb1";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
 
     </script>
 </body>
