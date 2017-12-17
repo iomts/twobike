@@ -3,7 +3,7 @@
 
 <head lang="en">
     <meta charset="UTF-8">
-    <title>微人类 | 一个平凡的人类，总是说着愿做平凡人，其实多么的不甘平凡此生。</title>
+    <title>微人类 | 一个平凡的人类，其实不甘平凡</title>
     <meta name="keywords" content="微人类，何立军的个人网站，何立军的博客">
     <meta name="description" content="何立军的个人站点，包括了一些技术博客，随心感悟，平时喜欢听的民谣，还有一些骑行的碎影，再或是读过的书单。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,8 +23,6 @@
 
         .get-title {
             font-size: 200%;
-            border: 2px solid #fff;
-            padding: 20px;
             display: inline-block;
         }
 
@@ -34,6 +32,7 @@
 
         .detail {
             background: #fff;
+            padding-top: 40px;
         }
 
         .detail-h2 {
@@ -162,6 +161,7 @@
             animation: scale-big 1.5s;
             color: #0087ff;
         }
+
         .icon-qq-share:before {
             content: "\e62a";
         }
@@ -202,6 +202,7 @@
         .el-jianshu:hover {
             animation: scale-big 1.5s;
         }
+
         /** 放大、缩小 */
 
         @-webkit-keyframes scale-small {
@@ -250,24 +251,43 @@
             <h1 class="am-topbar-brand">
                 <a href="//www.twobike.cn">微人类</a>
             </h1>
-            <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
-        class="am-icon-bars"></span></button>
+            <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}">
+                <span class="am-sr-only">导航切换</span>
+                <span class="am-icon-bars"></span>
+            </button>
             <div class="am-topbar-right am-collapse am-topbar-collapse" id="collapse-head">
                 <ul class="am-nav am-nav-pills am-topbar-nav">
-                    <li class="am-active"><a href="#">首页</a></li>
-                    <li><a href="./blogs/index.html" target="_blank">博客</a></li>
-                    <li><a href="./life/index.html" target="_blank">感悟</a></li>
-                    <li><a href="http://www.xiami.com/collect/162245539" target="_blank">民谣</a></li>
-                    <li><a href="./info/1024.html" target="_blank">骑行</a></li>
+                    <li class="am-active">
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="./blogs/index.html" target="_blank">博客</a>
+                    </li>
+                    <li>
+                        <a href="./life/index.html" target="_blank">感悟</a>
+                    </li>
+                    <li>
+                        <a href="http://www.xiami.com/collect/162245539" target="_blank">民谣</a>
+                    </li>
+                    <li>
+                        <a href="./info/1024.html" target="_blank">骑行</a>
+                    </li>
                     <li class="am-dropdown" data-am-dropdown>
                         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-            其他 <span class="am-icon-caret-down"></span>
-          </a>
+                            其他
+                            <span class="am-icon-caret-down"></span>
+                        </a>
                         <ul class="am-dropdown-content">
                             <li class="am-dropdown-header"></li>
-                            <li><a href="./book/index.html" target="_blank">1. 个人书单</a></li>
-                            <li><a href="./react/index.html" target="_blank">2. React学习</a></li>
-                            <li><a href="//www.cnblogs.com/liliangel/p/6732507.html" target="_blank">3. 最新文章</a></li>
+                            <li>
+                                <a href="./book/index.html" target="_blank">1. 个人书单</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/helijun/react-learn" target="_blank">2. React学习</a>
+                            </li>
+                            <li>
+                                <a href="//www.cnblogs.com/liliangel/p/6732507.html" target="_blank">3. 最新文章</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -278,10 +298,14 @@
     <div class="get am-animation-fade am-animation-slide-top">
         <div class="am-g">
             <div class="col-lg-12">
-                <h1 class="get-title">微人类 - 一个平凡的人类</h1>
+                <h1 class="get-title">不是在写代码，就是在骑行的路上</h1>
+                <p>
+                    Coding，Riding，Or Reading.
+                </p>
+                <!-- <h1 class="get-title">微人类 - 一个平凡的人类</h1>
                 <p>
                     愿做平凡人，开开心心简简单单已极好
-                </p>
+                </p> -->
                 <!-- <p>
                     <a href="#" class="am-btn am-btn-sm get-btn">关于微人类</a>
                 </p> -->
@@ -292,7 +316,7 @@
     <div class="detail">
         <div class="am-g am-container">
             <div class="col-lg-12">
-                <h2 class="detail-h2" data-am-scrollspy="{animation:'slide-top'}">Coding，Riding，Or Reading. 不是在写代码，就是在骑行的路上</h2>
+                <!-- <h2 class="detail-h2" data-am-scrollspy="{animation:'slide-top'}">Coding，Riding，Or Reading. 不是在写代码，就是在骑行的路上</h2> -->
                 <div class="am-g">
 
                     <a href="./blogs/index.html" target="_blank" class="col-lg-3 col-md-6 col-sm-12 detail-mb m-blog" data-am-scrollspy="{animation:'slide-left'}">
@@ -339,7 +363,7 @@
     <div class="hope">
         <div class="am-g am-container">
             <div class="col-lg-8 col-md-8 col-sm-12 am-text-center" data-am-scrollspy="{animation:'slide-left', repeat: true}">
-               
+
                 <a class="col-lg-2 col-md-4 col-sm-6 el-wechat" title="微信" id="wechatEl" data-id="microman756">
                     <i class="icon-iconweixin"></i>
                 </a>
@@ -397,7 +421,7 @@
     <script type="text/javascript">
         TWOBIKE.index = {
             init: function () {
-                if ($(window).height().innerWidth > 750) {
+                if ($(window).width() > 750) {
                     $.AMUI.progress.start();
 
                     TWOBIKE.loadCss('/static/css/index-pc.css', function () {
@@ -409,7 +433,7 @@
                 this.addCnzz();
             },
 
-            addCnzz: function(){
+            addCnzz: function () {
                 var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
                 document.write(unescape("%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271283375%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
             },
